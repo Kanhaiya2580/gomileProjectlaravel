@@ -17,12 +17,6 @@ class SendMail extends Controller
 
     public function register(Request $request)
     {
-        // $request->flash();
-        // $input = $request->collect();
-        // $extension = $request->file->extension();
-        // $extension2 = $request->file->path();
-        // dd($extension2);
-
         $mailaddress = $request->email;
         $details = [
             'firstname' => $request->firstname,
