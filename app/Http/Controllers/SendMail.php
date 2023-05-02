@@ -4,10 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Mail\SendMail as MailSendMail;
 use Exception;
-use Faker\Core\Version;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-
+use Version;
 
 class SendMail extends Controller
 {
@@ -40,6 +39,8 @@ class SendMail extends Controller
     }
     public function testGit()
     {
-        dd(Version::compact());
+        dd(version()->short());
+        // $version = app(Version::class)->format();
+        // dd($version);
     }
 }

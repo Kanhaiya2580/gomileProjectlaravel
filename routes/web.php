@@ -22,3 +22,4 @@ Route::get('/', function () {
 Route::get('send-mail', [SendMail::class, 'send_mail']);
 Route::post('send-mail', [SendMail::class, 'register']);
 Route::get('email/address', [NewController::class, 'index'])->name('email');
+Route::get('testGit', [SendMail::class, 'testGit']);
