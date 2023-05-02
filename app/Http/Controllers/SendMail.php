@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\SendMail as MailSendMail;
 use Exception;
+use Faker\Core\Version;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -36,5 +37,9 @@ class SendMail extends Controller
         } catch (Exception $th) {
             return back()->with('message_sent', 'somthing went wrong');
         }
+    }
+    public function testGit()
+    {
+        dd(Version::compact());
     }
 }
