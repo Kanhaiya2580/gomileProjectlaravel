@@ -39,8 +39,23 @@ class SendMail extends Controller
     }
     public function testGit()
     {
-        dd(version()->short());
-        // $version = app(Version::class)->format();
-        // dd($version);
+        $version = shell_exec('git describe --abbrev=0 --tags');
+        $tags = shell_exec('git tag');
+
+        return response()->json([
+            'version' => trim($version),
+            'tags' => explode("\n", trim($tags)),
+        ]);
+    }
+
+    public function index()
+    {
+        $version = shell_exec('git describe --abbrev=0 --tags');
+        $tags = shell_exec('git tag');
+
+        return response()->json([
+            'version' => trim($version),
+            'tags' => explode("\n", trim($tags)),
+        ]);
     }
 }
