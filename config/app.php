@@ -162,7 +162,6 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         PragmaRX\Version\Package\ServiceProvider::class,
-        Akaunting\Version\Provider::class,
 
         /*
          * Package Service Providers...
