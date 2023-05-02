@@ -15,10 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('send-mail', [SendMail::class, 'send_mail']);
 Route::post('send-mail', [SendMail::class, 'register']);
 Route::get('email/address', [NewController::class, 'index'])->name('email');
